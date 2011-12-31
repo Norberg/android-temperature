@@ -12,10 +12,10 @@ def eventloop():
 				change_weather("daily")
 			elif id=="button_weekly":
 				change_weather("weekly")
-			elif id=="button_montly":
-				change_weather("montly")
+			elif id=="button_monthly":
+				change_weather("monthly")
 			elif id=="button_monthly_avg":
-				change_weather("montly_avg")
+				change_weather("monthlyAVG")
 			elif id=="button_quit":
 				return
 		elif event["name"]=="screen":
@@ -38,26 +38,17 @@ def main():
 					android:layout_height="wrap_content" android:text="Daily"></Button>
 				<Button android:id="@+id/button_weekly" android:layout_width="wrap_content"
 					android:layout_height="wrap_content" android:text="Weekly"></Button>
-				<Button android:id="@+id/button_montly" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" android:text="Montly"></Button>
+				<Button android:id="@+id/button_monthly" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="Monthly"></Button>
 				<Button android:id="@+id/button_monthly_avg" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" android:text="Montly Average"></Button>
-				<Button android:id="@+id/button_quit" android:layout_width="wrap_content"
-					android:layout_height="wrap_content" android:text="Quit"></Button>
+					android:layout_height="wrap_content" android:text="Monthly Average"></Button>
 		</LinearLayout>
 		<ImageView android:id="@+id/imageview"
 			android:src="@drawable/brush"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content" />
-		<TextView android:layout_width="match_parent"
-			android:layout_height="wrap_content" android:text="TextView"
-			android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical|center_horizontal|center"></TextView>
-		<EditText android:layout_width="match_parent"
-			android:layout_height="wrap_content" android:id="@+id/editText1"
-			android:tag="Tag Me" android:inputType="textCapWords|textPhonetic|number">
-			<requestFocus></requestFocus>
-		</EditText>
-		<CheckBox android:layout_height="wrap_content" android:id="@+id/checkBox1" android:layout_width="234dp" android:text="Howdy, neighbors." android:checked="true"></CheckBox>
+		<Button android:id="@+id/button_quit" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Quit"></Button>
 	</LinearLayout>
 	"""
 	print droid.fullShow(layout)
